@@ -1,0 +1,106 @@
+#include "stdafx.h"
+#include <iostream>
+
+
+
+using namespace std;
+
+
+
+int main()
+
+{
+
+   //объявляем необходимые переменные
+
+   const int size = 20;
+
+   int array[size], var;
+
+   bool label = true;
+
+   
+
+   //выводим подсказку пользователю
+
+   cout << "Enter 20 numbers in an interval from 10 up to 100" << endl << endl;
+
+   
+
+   //начинаем ввод 20-и чисел в цикле
+
+   for(int i = 0; i < size; i++)
+
+   {
+
+      //запрашиваем число, запоминаем его в переменную var
+
+      cout << "Enter: ";
+
+      cin >> var;
+
+      
+
+      //если число находится в нужном интервале
+
+      if(var >= 10 && var <= 100)
+
+      {
+
+         //записываем его в массив
+
+         array[i] = var;
+
+         
+
+         //проверяем, не дублирует ли оно
+
+         //введенное ранее число
+
+         for(int j = 0; j < i; j++)
+
+         {
+
+            //если найдено соответствие, то меняем флаг переменной label
+
+            if(array[j] == array[i])
+
+               label = false;
+
+         }
+
+         
+
+         //если соответствия не было найдено, то печатаем число
+
+         if(label == true)
+
+            cout << array[i] << endl;
+
+      }
+
+      //в случае, если было введено число не из интервала 10 - 100
+
+      else
+
+      {
+
+         cout << "Error! Incorrect interval" << endl;
+
+         i--;
+
+      }
+
+      
+
+      //меняем флаг перед входом в новую итерацию
+
+      label = true;
+
+   }
+
+   
+
+   return 0;
+
+}
