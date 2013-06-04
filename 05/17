@@ -1,0 +1,55 @@
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+   int id, kol;
+   float sum1 = 0, sum2 = 0, sum3 = 0, sum4 = 0, sum5 = 0;
+   
+   while (id != 0)
+   {
+      cout << "1 - $2.98; 2 - $4.50; 3 - $9.98; 4 - $4.49; 5 - $6.87\n" << endl;
+      cout << "Vvedite nomer produkta (vihod - 0): ";
+      cin >> id;
+    
+      if (id == 0)
+         break;
+      if (id < 0 && id > 5)
+         continue;
+		 
+      cout << endl << "Vvedite kolichestvo, prodannoye za den': ";
+      cin >> kol;
+      cout << endl;
+	  
+      switch(id)
+      {
+         case 1:
+            sum1 = sum1 + 2.98 * kol;
+            break;
+         case 2:
+            sum2 = sum2 + 4.50 * kol;
+            break;
+         case 3:
+            sum3 = sum3 + 9.98 * kol;
+            break;
+         case 4:
+            sum4 = sum4 + 4.49 * kol;
+            break;
+         case 5:
+            sum5 = sum5 + 6.87 * kol;
+            break;
+      }
+   }
+   
+   cout << "Nomer produkta" << setw(30) << "Stoimost' za nedelyu"
+        << endl << "1" << setw(30) << sum1 * 7
+        << endl << "2" << setw(30) << sum2 * 7
+        << endl << "3" << setw(30) << sum3 * 7
+        << endl << "4" << setw(30) << sum4 * 7
+        << endl << "5" << setw(30) << sum5 * 7 << endl;
+		
+   return 0;
+}
