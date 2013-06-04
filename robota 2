@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int x, y, z;
+   
+   cout << "Vvedite tri razlichnig celih chisla: \n";
+   cin >> x >> y >> z;
+   
+   cout << "Summa ravna " << x + y + z << endl;
+   cout << "Srednee znacheniye ravno " << (x + y + z) / 3 << endl;
+   cout << "Proizvedenie ravno " << x * y * z << endl;
+   
+   if (x > y)
+      if (x > z)
+         cout << "Naibolshee ravno " << x << endl;
+   if (y > x)
+      if (y > z)
+         cout << "Naibolshee ravno " << y << endl;
+   if (z > x)
+      if (z > y)
+         cout << "Naibolshee ravno " << z << endl;
+   if (x < y)
+      if (x < z)
+         cout << "Naimenshee ravno " << x << endl;
+   if (y < x)
+      if (y < z)
+         cout << "Naimenshee ravno " << y << endl;
+   if (z < x)
+      if (z < y)
+         cout << "Naimenshee ravno " << z << endl;
+  	 
+   return 0;
+}
