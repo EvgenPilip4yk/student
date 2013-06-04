@@ -4,9 +4,35 @@
 using namespace std;
 
 int main()
-{
-   for (int i = 1; i <= 5; i++)
-      cout << i << "\t" << i * 10 << "\t" << i * 100 << " \t" << i * 1000 << endl;
-   getch(); 
-   return 0;
+{  
+   cout<<"N"<<"\n";
+	for (int i = 1; i <= 5; i++)
+	{
+
+
+		cout << i<<"\n" ;
+	}
+	cout<<"10*N"<<"\n";
+	for (int i = 10; i <= 50; i+=10)
+	{
+
+
+		cout << i <<"\n" ;
+	}
+	cout<<"100*N"<<"\n";
+	for (int i = 100; i <= 500; i+=100)
+	{
+
+
+		cout << i <<"\n" ;
+	}
+	cout<<"1000*N"<<"\n";
+	for (int i = 1000; i <= 5000; i+=1000)
+	{
+
+
+		cout << i << endl;
+	}
+	getch(); 
+	return 0;
 }
