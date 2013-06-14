@@ -1,0 +1,87 @@
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Invoice
+{
+public:
+  void setPartNumber (string number)
+	{
+		product = number;
+	}
+	string getPartNumber()
+	{
+		return product;
+	}
+	void setPartDescription (string desc)
+	{
+		description = desc;
+	}
+	string getPartDescription()
+	{
+		return description;
+	}
+	void setPartArtikul (string art)
+	{
+		Artikul = art;
+	}
+	string getPartArtikul()
+	{
+		return Artikul;
+	}
+
+
+	void setQuantityPurchased (int amount)
+	{
+		quantity = amount;
+	}
+	int getQuantityPurchased()
+	{
+		return quantity;
+	}
+	void setPriceItem (float price)
+	{
+		prices = price;
+	}
+	float getPriceItem()
+	{
+		return prices;
+	}
+	void getInvoiceAmount()
+	{
+		float total = quantity * prices;
+		cout << "Artikul tovara:" << getPartArtikul()<< "\nProdukt#: " << getPartNumber() << "\nopisanie: " << getPartDescription() << "\nKol-vo: " << getQuantityPurchased() << "\nCena: " << getPriceItem() << "\nego obshaya: " << total << endl;
+	}
+private:
+	int quantity;
+	float prices;
+	string product;
+	string description;
+	string Artikul;
+};
+
+
+int main()
+{
+	Invoice invoice1;
+	Invoice invoice2;
+
+	invoice1.setPartDescription("Plombir");
+	invoice1.setPartArtikul("12.210.1");
+	invoice1.setPartNumber("12345");
+	invoice1.setPriceItem(4.99);
+	invoice1.setQuantityPurchased(5);
+
+	invoice1.getInvoiceAmount();
+
+	invoice2.setPartDescription("Spichki");
+	invoice2.setPartArtikul("21.11.126");
+	invoice2.setPartNumber("111");
+	invoice2.setPriceItem(.99);
+	invoice2.setQuantityPurchased(75);
+
+	invoice2.getInvoiceAmount();
+	system("pause");
+	return 0;
+}
